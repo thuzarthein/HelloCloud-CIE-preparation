@@ -1,0 +1,160 @@
+thuzarthein@Thuzars-MacBook-Pro ~ % aws ec2 describe-vpcs --profile master-programmatic-admin --debug
+2026-08-01 11:57:40,176 - MainThread - awscli.clidriver - DEBUG - CLI version: aws-cli/2.36.8 Python/3.14.6 Darwin/25.6.0 exe/arm64
+2026-08-01 11:57:40,176 - MainThread - awscli.clidriver - DEBUG - Arguments entered to CLI: ['ec2', 'describe-vpcs', '--profile', 'master-programmatic-admin', '--debug']
+2026-08-01 11:57:40,196 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.waiters.register_add_waiters for event building-command-table.main
+2026-08-01 11:57:40,197 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.alias.register_alias_commands for event building-command-table.main
+2026-08-01 11:57:40,198 - MainThread - botocore.hooks - DEBUG - Event building-command-table.main: calling handler <function add_waiters at 0x108717480>
+2026-08-01 11:57:40,198 - MainThread - botocore.hooks - DEBUG - Event building-command-table.main: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x10875cc20>>
+2026-08-01 11:57:40,198 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/data/cli.json
+2026-08-01 11:57:40,199 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.globalargs.register_parse_global_args for event top-level-args-parsed
+2026-08-01 11:57:40,199 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.cloudfront.register for event top-level-args-parsed
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_types at 0x1087b22a0>
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function no_sign_request at 0x1087b2610>
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_verify_ssl at 0x1087b2560>
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_cli_read_timeout at 0x1087b2770>
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <function resolve_cli_connect_timeout at 0x1087b26c0>
+2026-08-01 11:57:40,200 - MainThread - botocore.hooks - DEBUG - Event top-level-args-parsed: calling handler <built-in method update of dict object at 0x1087cb5c0>
+2026-08-01 11:57:40,200 - MainThread - botocore.session - DEBUG - Setting config variable for profile to 'master-programmatic-admin'
+2026-08-01 11:57:40,200 - MainThread - awscli.clidriver - DEBUG - CLI version: aws-cli/2.36.8 Python/3.14.6 Darwin/25.6.0 exe/arm64
+2026-08-01 11:57:40,200 - MainThread - awscli.clidriver - DEBUG - Arguments entered to CLI: ['ec2', 'describe-vpcs', '--profile', 'master-programmatic-admin', '--debug']
+2026-08-01 11:57:40,200 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.paramfile.register_init_uri_param_handler for event session-initialized
+2026-08-01 11:57:40,200 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.binaryformat.register_init_binary_formatter for event session-initialized
+2026-08-01 11:57:40,200 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.clidriver.register_no_pager_handler for event session-initialized
+2026-08-01 11:57:40,200 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.assumerole.register_assume_role_provider for event session-initialized
+2026-08-01 11:57:40,201 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.timestampformat.register_timestamp_format for event session-initialized
+2026-08-01 11:57:40,201 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.history.register_history_mode for event session-initialized
+2026-08-01 11:57:40,205 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.sso.register_sso_commands for event session-initialized
+2026-08-01 11:57:40,211 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function add_timestamp_parser at 0x1087cd590>
+2026-08-01 11:57:40,211 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function register_uri_param_handler at 0x108373740>
+2026-08-01 11:57:40,211 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function add_binary_formatter at 0x1087cc930>
+2026-08-01 11:57:40,211 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function no_pager_handler at 0x1086f7320>
+2026-08-01 11:57:40,211 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function inject_assume_role_provider_cache at 0x1087cd2d0>
+2026-08-01 11:57:40,212 - MainThread - botocore.utils - DEBUG - IMDS ENDPOINT: http://169.254.169.254/
+2026-08-01 11:57:40,218 - MainThread - botocore.credentials - DEBUG - Skipping environment variable credential check because profile name was explicitly set.
+2026-08-01 11:57:40,218 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function attach_history_handler at 0x1087cd850>
+2026-08-01 11:57:40,218 - MainThread - botocore.hooks - DEBUG - Event session-initialized: calling handler <function inject_json_file_cache at 0x10889b110>
+2026-08-01 11:57:40,237 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/ec2/2016-11-15/service-2.json
+2026-08-01 11:57:40,303 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.removals.register_removals for event building-command-table.ec2
+2026-08-01 11:57:40,304 - MainThread - botocore.hooks - DEBUG - Event building-command-table.ec2: calling handler functools.partial(<function _remove_commands at 0x10d89f480>, commands_to_remove=['import-instance', 'import-volume'])
+2026-08-01 11:57:40,304 - MainThread - awscli.customizations.removals - DEBUG - Removing operation: import-instance
+2026-08-01 11:57:40,304 - MainThread - awscli.customizations.removals - DEBUG - Removing operation: import-volume
+2026-08-01 11:57:40,304 - MainThread - botocore.hooks - DEBUG - Event building-command-table.ec2: calling handler <function add_waiters at 0x108717480>
+2026-08-01 11:57:40,319 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/ec2/2016-11-15/waiters-2.json
+2026-08-01 11:57:40,319 - MainThread - botocore.hooks - DEBUG - Event building-command-table.ec2: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x10875cc20>>
+2026-08-01 11:57:40,320 - MainThread - awscli.clidriver - DEBUG - OrderedDict({'filters': <awscli.arguments.ListArgument object at 0x10da6ee40>, 'vpc-ids': <awscli.arguments.ListArgument object at 0x10d826e90>, 'next-token': <awscli.arguments.CLIArgument object at 0x10da6ef90>, 'max-results': <awscli.arguments.CLIArgument object at 0x10d826fd0>, 'dry-run': <awscli.arguments.BooleanArgument object at 0x10da6f0e0>, 'no-dry-run': <awscli.arguments.BooleanArgument object at 0x10d827110>})
+2026-08-01 11:57:40,320 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.streamingoutputarg.register_streaming_output_arg for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,321 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.argrename.register_arg_renames for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,322 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.toplevelbool.register_bool_params for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,322 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.cliinput.register_cli_input_args for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,323 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.paginate.register_pagination for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,323 - MainThread - awscli.lazy_emitter - DEBUG - Lazy-initializing plugin awscli.customizations.generatecliskeleton.register_generate_cli_skeleton for event building-argument-table.ec2.describe-vpcs
+2026-08-01 11:57:40,324 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function add_streaming_output_arg at 0x10d89f8a0>
+2026-08-01 11:57:40,324 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function rename_arg.<locals>._rename_arg at 0x10d89f270>
+2026-08-01 11:57:40,324 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function rename_arg.<locals>._rename_arg at 0x10e0243b0>
+2026-08-01 11:57:40,324 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler functools.partial(<function pull_up_bool at 0x10e040510>, event_handler=<awscli.lazy_emitter.LazyInitEmitter object at 0x1086ba660>)
+2026-08-01 11:57:40,324 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function add_cli_input_json at 0x10e040b40>
+2026-08-01 11:57:40,325 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function add_cli_input_yaml at 0x10e041a60>
+2026-08-01 11:57:40,325 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function unify_paging_params at 0x10e0422a0>
+2026-08-01 11:57:40,340 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/ec2/2016-11-15/paginators-1.json
+2026-08-01 11:57:40,340 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/ec2/2016-11-15/paginators-1.sdk-extras.json
+2026-08-01 11:57:40,340 - MainThread - awscli.customizations.paginate - DEBUG - Modifying paging parameters for operation: DescribeVpcs
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event building-argument-table.ec2.describe-vpcs: calling handler <function add_generate_skeleton at 0x10e043110>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.ec2.describe-vpcs: calling handler <bound method OverrideRequiredArgsArgument.override_required_args of <awscli.customizations.cliinput.CliInputJSONArgument object at 0x10da6fa10>>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.ec2.describe-vpcs: calling handler <bound method OverrideRequiredArgsArgument.override_required_args of <awscli.customizations.cliinput.CliInputYAMLArgument object at 0x10da6fcb0>>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event before-building-argument-table-parser.ec2.describe-vpcs: calling handler <bound method GenerateCliSkeletonArgument.override_required_args of <awscli.customizations.generatecliskeleton.GenerateCliSkeletonArgument object at 0x10e0981a0>>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event building-command-table.ec2_describe-vpcs: calling handler <function add_waiters at 0x108717480>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event building-command-table.ec2_describe-vpcs: calling handler <bound method AliasSubCommandInjector.on_building_command_table of <awscli.alias.AliasSubCommandInjector object at 0x10875cc20>>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event operation-args-parsed.ec2.describe-vpcs: calling handler functools.partial(<function validate_boolean_mutex_groups at 0x10e0405c0>, boolean_pairs=[])
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event operation-args-parsed.ec2.describe-vpcs: calling handler functools.partial(<function check_should_enable_pagination at 0x10e042400>, ['next-token', 'max-results'], {}, OrderedDict({'filters': <awscli.arguments.ListArgument object at 0x10da6ee40>, 'vpc-ids': <awscli.arguments.ListArgument object at 0x10d826e90>, 'next-token': <awscli.arguments.CLIArgument object at 0x10da6ef90>, 'max-results': <awscli.arguments.CLIArgument object at 0x10d826fd0>, 'dry-run': <awscli.arguments.BooleanArgument object at 0x10da6f0e0>, 'no-dry-run': <awscli.arguments.BooleanArgument object at 0x10d827110>, 'cli-input-json': <awscli.customizations.cliinput.CliInputJSONArgument object at 0x10da6fa10>, 'cli-input-yaml': <awscli.customizations.cliinput.CliInputYAMLArgument object at 0x10da6fcb0>, 'starting-token': <awscli.customizations.paginate.PageArgument object at 0x10da6fe00>, 'page-size': <awscli.customizations.paginate.PageArgument object at 0x10e0602d0>, 'max-items': <awscli.customizations.paginate.PageArgument object at 0x10e060550>, 'generate-cli-skeleton': <awscli.customizations.generatecliskeleton.GenerateCliSkeletonArgument object at 0x10e0981a0>}))
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.filters: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.vpc-ids: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.next-token: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.max-results: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,341 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.dry-run: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.cli-input-json: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.cli-input-yaml: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.starting-token: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.page-size: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.max-items: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event load-cli-arg.ec2.describe-vpcs.generate-cli-skeleton: calling handler <awscli.paramfile.URIArgumentHandler object at 0x1088116a0>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event calling-command.ec2.describe-vpcs: calling handler <bound method CliInputArgument.add_to_call_parameters of <awscli.customizations.cliinput.CliInputJSONArgument object at 0x10da6fa10>>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event calling-command.ec2.describe-vpcs: calling handler <bound method CliInputArgument.add_to_call_parameters of <awscli.customizations.cliinput.CliInputYAMLArgument object at 0x10da6fcb0>>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event calling-command.ec2.describe-vpcs: calling handler <bound method GenerateCliSkeletonArgument.generate_skeleton of <awscli.customizations.generatecliskeleton.GenerateCliSkeletonArgument object at 0x10e0981a0>>
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event calling-command.ec2.describe-vpcs: calling handler functools.partial(<function check_should_enable_pagination_call_parameters at 0x10e0428d0>, ['NextToken', 'MaxResults'])
+2026-08-01 11:57:40,342 - MainThread - botocore.hooks - DEBUG - Event before-create-client: calling handler <function register_session_id_event.<locals>._inject_session_id at 0x108716fb0>
+2026-08-01 11:57:40,345 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: assume-role
+2026-08-01 11:57:40,345 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: assume-role-with-web-identity
+2026-08-01 11:57:40,345 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: sso
+2026-08-01 11:57:40,345 - MainThread - botocore.credentials - DEBUG - Looking for credentials via: shared-credentials-file
+2026-08-01 11:57:40,345 - MainThread - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-08-01 11:57:40,346 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/endpoints.json
+2026-08-01 11:57:40,361 - MainThread - botocore.hooks - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x107325010>
+2026-08-01 11:57:40,377 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/ec2/2016-11-15/endpoint-rule-set-1.json
+2026-08-01 11:57:40,377 - MainThread - botocore.loaders - DEBUG - Loading JSON file: /usr/local/aws-cli/awscli/botocore/data/partitions.json
+2026-08-01 11:57:40,383 - MainThread - botocore.hooks - DEBUG - Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x107d903b0>
+2026-08-01 11:57:40,383 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for ec2 via: environment_service
+2026-08-01 11:57:40,383 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for ec2 via: environment_global
+2026-08-01 11:57:40,384 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for ec2 via: config_service
+2026-08-01 11:57:40,384 - MainThread - botocore.configprovider - DEBUG - Looking for endpoint for ec2 via: config_global
+2026-08-01 11:57:40,384 - MainThread - botocore.configprovider - DEBUG - No configured endpoint found.
+2026-08-01 11:57:40,386 - MainThread - botocore.endpoint - DEBUG - Setting ec2 timeout as (60, 60)
+2026-08-01 11:57:40,387 - MainThread - botocore.hooks - DEBUG - Event provide-client-params.ec2.DescribeVpcs: calling handler <function base64_decode_input_blobs at 0x1087cc9e0>
+2026-08-01 11:57:40,387 - MainThread - botocore.hooks - DEBUG - Event before-parameter-build.ec2.DescribeVpcs: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x107d7e7b0>>
+2026-08-01 11:57:40,387 - MainThread - botocore.hooks - DEBUG - Event before-parameter-build.ec2.DescribeVpcs: calling handler <function generate_idempotent_uuid at 0x107e20670>
+2026-08-01 11:57:40,388 - MainThread - botocore.hooks - DEBUG - Event before-parameter-build.ec2.DescribeVpcs: calling handler <function _handle_request_validation_mode_member at 0x107e23690>
+2026-08-01 11:57:40,388 - MainThread - botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Region': 'ap-southeast-1', 'UseDualStack': False, 'UseFIPS': False}
+2026-08-01 11:57:40,388 - MainThread - botocore.regions - DEBUG - Endpoint provider result: https://ec2.ap-southeast-1.amazonaws.com
+2026-08-01 11:57:40,388 - MainThread - botocore.hooks - DEBUG - Event before-call.ec2.DescribeVpcs: calling handler <function inject_api_version_header_if_needed at 0x107e22400>
+2026-08-01 11:57:40,388 - MainThread - botocore.endpoint - DEBUG - Making request for OperationModel(name=DescribeVpcs) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'aws-cli/2.36.8 md/awscrt#0.36.0 ua/2.1 os/macos#25.6.0 md/arch#arm64 lang/python#3.14.6 md/pyimpl#CPython m/n,Z,E,C,b cfg/retry-mode#standard md/installer#exe sid/ed72dbc62569 md/prompt#off md/command#ec2.describe-vpcs'}, 'body': {'Action': 'DescribeVpcs', 'Version': '2016-11-15'}, 'url': 'https://ec2.ap-southeast-1.amazonaws.com/', 'context': {'client_region': 'ap-southeast-1', 'client_config': <botocore.config.Config object at 0x10e061310>, 'has_streaming_input': False, 'auth_type': None, 'unsigned_payload': None, 'auth_options': ['aws.auth#sigv4']}}
+2026-08-01 11:57:40,389 - MainThread - botocore.hooks - DEBUG - Event request-created.ec2.DescribeVpcs: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10e099160>>
+2026-08-01 11:57:40,389 - MainThread - botocore.hooks - DEBUG - Event choose-signer.ec2.DescribeVpcs: calling handler <function set_operation_specific_signer at 0x107e203b0>
+2026-08-01 11:57:40,389 - MainThread - botocore.hooks - DEBUG - Event choose-signer.ec2.DescribeVpcs: calling handler <function _set_auth_scheme_preference_signer at 0x107e23740>
+2026-08-01 11:57:40,389 - MainThread - botocore.auth - DEBUG - Calculating signature using v4 auth.
+2026-08-01 11:57:40,389 - MainThread - botocore.auth - DEBUG - CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.ap-southeast-1.amazonaws.com
+x-amz-date:20260801T155740Z
+
+content-type;host;x-amz-date
+d821ac2c2958664a08eb0f0b183ebf80201e8a50da5d9e98eca9bc36ef648656
+2026-08-01 11:57:40,389 - MainThread - botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20260801T155740Z
+20260801/ap-southeast-1/ec2/aws4_request
+0d0547e3c3530700dd8db5b0e6d37fdaaadc1990421718ee5ccd7acdc2464fb6
+2026-08-01 11:57:40,390 - MainThread - botocore.auth - DEBUG - Signature:
+979054e1bddce5241253593d4f3192b66d7eb3177dcebfcb25ab74406f161c92
+2026-08-01 11:57:40,390 - MainThread - botocore.hooks - DEBUG - Event request-created.ec2.DescribeVpcs: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x10e062210>>
+2026-08-01 11:57:40,390 - MainThread - botocore.hooks - DEBUG - Event request-created.ec2.DescribeVpcs: calling handler <function add_retry_headers at 0x107e22f00>
+2026-08-01 11:57:40,390 - MainThread - botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.ap-southeast-1.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'aws-cli/2.36.8 md/awscrt#0.36.0 ua/2.1 os/macos#25.6.0 md/arch#arm64 lang/python#3.14.6 md/pyimpl#CPython m/n,Z,E,C,b cfg/retry-mode#standard md/installer#exe sid/ed72dbc62569 md/prompt#off md/command#ec2.describe-vpcs', 'X-Amz-Date': b'20260801T155740Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA3KBBXGNCHZGLLFVV/20260801/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=979054e1bddce5241253593d4f3192b66d7eb3177dcebfcb25ab74406f161c92', 'amz-sdk-invocation-id': b'aca16fa7-6e47-4ec7-a511-d83b959e871a', 'amz-sdk-request': b'attempt=1', 'Content-Length': '38'}>
+2026-08-01 11:57:40,390 - MainThread - botocore.httpsession - DEBUG - Certificate path: /usr/local/aws-cli/awscli/botocore/cacert.pem
+2026-08-01 11:57:40,390 - MainThread - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): ec2.ap-southeast-1.amazonaws.com:443
+2026-08-01 11:57:42,349 - MainThread - urllib3.connectionpool - DEBUG - https://ec2.ap-southeast-1.amazonaws.com:443 "POST / HTTP/1.1" 403 None
+2026-08-01 11:57:42,350 - MainThread - botocore.parsers - DEBUG - Response headers: {'x-amzn-RequestId': 'df883c42-c6d6-4ce6-a657-885c7a5f1bd1', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'vary': 'accept-encoding', 'Content-Type': 'text/xml;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Date': 'Sat, 01 Aug 2026 15:57:42 GMT', 'Server': 'AmazonEC2'}
+2026-08-01 11:57:42,350 - MainThread - botocore.parsers - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Response><Errors><uestError><Code>UnauthorizedOperation</Code><Message>You are not authorized to perform this operation. User: arn:aws:iam::777459807044:user/master-programmatic-admin is not authorized to perform: ec2:DescribeVpcs because no identity-based policy allows the ec2:DescribeVpcs action</Message></Error></Errors><RequestID>df883c42-c6d6-4ce6-a657-885c7a5f1bd1</RequestID></Response>'
+2026-08-01 11:57:42,371 - MainThread - botocore.hooks - DEBUG - Event needs-retry.ec2.DescribeVpcs: calling handler <bound method RetryHandler.needs_retry of <botocore.retries.standard.RetryHandler object at 0x10e09b8c0>>
+2026-08-01 11:57:42,371 - MainThread - botocore.retries.standard - DEBUG - Not retrying request.
+2026-08-01 11:57:42,372 - MainThread - botocore.hooks - DEBUG - Event after-call.ec2.DescribeVpcs: calling handler <bound method RetryQuotaChecker.release_retry_quota of <botocore.retries.standard.RetryQuotaChecker object at 0x10e09a900>>
+2026-08-01 11:57:42,372 - MainThread - awscli.clidriver - DEBUG - Exception caught in main()
+Traceback (most recent call last):
+  File "awscli/clidriver.py", line 604, in main
+  File "awscli/clidriver.py", line 742, in __call__
+  File "awscli/clidriver.py", line 959, in __call__
+  File "awscli/clidriver.py", line 1098, in invoke
+  File "awscli/clidriver.py", line 1119, in _display_response
+  File "awscli/formatter.py", line 76, in __call__
+  File "awscli/botocore/paginate.py", line 483, in build_full_result
+  File "awscli/botocore/paginate.py", line 267, in __iter__
+  File "awscli/botocore/context.py", line 124, in wrapper
+  File "awscli/botocore/paginate.py", line 356, in _make_request
+  File "awscli/botocore/client.py", line 442, in _api_call
+  File "awscli/botocore/context.py", line 124, in wrapper
+  File "awscli/botocore/client.py", line 932, in _make_api_call
+botocore.exceptions.ClientError: An error occurred (UnauthorizedOperation) when calling the DescribeVpcs operation: You are not authorized to perform this operation. User: arn:aws:iam::777459807044:user/master-programmatic-admin is not authorized to perform: ec2:DescribeVpcs because no identity-based policy allows the ec2:DescribeVpcs action
+
+aws: [ERROR]: An error occurred (UnauthorizedOperation) when calling the DescribeVpcs operation: You are not authorized to perform this operation. User: arn:aws:iam::777459807044:user/master-programmatic-admin is not authorized to perform: ec2:DescribeVpcs because no identity-based policy allows the ec2:DescribeVpcs action
+thuzarthein@Thuzars-MacBook-Pro ~ % 

@@ -1,0 +1,39 @@
+PrivateSubnet4: #PrivateSubnet4
+    Type: AWS::EC2::Subnet
+    Properties:
+      
+      AvailabilityZone: 'ap-southeast-1a'
+      
+      CidrBlock: '172.31.96.0/20'
+      
+      MapPublicIpOnLaunch: false
+      
+      Tags: 
+        - Key: Name
+          Value: PrivateSubnet4
+        - Key: Region
+          Value: Singapore
+        - Key : Environment
+          Value: Non-production
+      VpcId: 'vpc-064f536de9612a5d8'
+  RouteTableForPrivateSubnet4: #routeTableForPrivateSubnet4
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: Name
+          Value: RouteTableForPrivateSubnet4
+        - Key: Region
+          Value: Singapore
+        - Key : Environment
+          Value: Non-production
+      VpcId: 'vpc-064f536de9612a5d8'
+  PrivateSubnet4RouteTableAssociation: #logicalID
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref RouteTableForPrivateSubnet4
+      SubnetId: !Ref PrivateSubnet4
+
+
+    
+  
+

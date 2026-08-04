@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PublicInstance7:
+    Type: AWS::EC2::Instance
+    Properties:
+        
+        AvailabilityZone: 'ap-southeast-1b'
+        ImageId: 'ami-0532913178263be11'
+        InstanceType: 't2.micro'
+        KeyName: 'thuzar'
+        Tags:
+          - Key: "Name"
+            Value: "PublicInstance7"
+          - Key: "Region"
+            Value: "Singapore"
+          - Key: "Environment"
+            Value: "Non-Production"
+        

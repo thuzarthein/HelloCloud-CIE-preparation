@@ -1,0 +1,153 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Custom VPC for Singapore Region'
+Resources:
+  CustomVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: '172.31.0.0/16'
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+      Tags: 
+        - Key: 'Name'
+          Value: 'CustomVPC'
+        - Key: 'Environment'
+          Value: 'Non-Production'
+        - Key: 'Region'
+          Value: 'ap-southeast-1'
+  PrivateSubnet1: #logical ID for the first private subnet
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: 'ap-southeast-1a'
+      CidrBlock: '172.31.96.0/24'
+      MapPublicIpOnLaunch: false
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet1'
+        - Key: 'Environment'
+          Value: 'Non-Production'
+        - Key: 'Region'
+          Value: 'ap-southeast-1a'
+      VpcId: !Ref CustomVPC
+  RouteTable1: #logical ID for the first route table
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet1'
+        - Key: 'Region'
+          Value: 'ap-southeast-1a'
+      VpcId: !Ref CustomVPC
+
+  RouteTableAssociation1: #logical ID for the first route table association
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref RouteTable1
+      SubnetId: !Ref PrivateSubnet1
+  
+
+  PrivateSubnet2: #logical ID for the second private subnet
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: 'ap-southeast-1b'
+      CidrBlock: '172.31.112.0/24'
+      MapPublicIpOnLaunch: false
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet2'
+        - Key: 'Environment'
+          Value: 'Non-Production'
+        - Key: 'Region'
+          Value: 'ap-southeast-1b'
+      VpcId: !Ref CustomVPC
+  RouteTable2: #logical ID for the second route table
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet2'
+        - Key: 'Region'
+          Value: 'ap-southeast-1b'
+      VpcId: !Ref CustomVPC
+
+  RouteTableAssociation2: #logical ID for the second route table association
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref RouteTable2
+      SubnetId: !Ref PrivateSubnet2
+  PrivateSubnet3: #logical ID for the third private subnet
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: 'ap-southeast-1c'
+      CidrBlock: '172.31.128.0/24'
+      MapPublicIpOnLaunch: false
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet3'
+        - Key: 'Environment'
+          Value: 'Non-Production'
+        - Key: 'Region'
+          Value: 'ap-southeast-1c'
+      VpcId: !Ref CustomVPC
+  RouteTable3: #logical ID for the third route table
+    Type: AWS::EC2::RouteTable
+    Properties:
+      Tags: 
+        - Key: 'Name'
+          Value: 'PrivateSubnet3'
+        - Key: 'Region'
+          Value: 'ap-southeast-1c'
+      VpcId: !Ref CustomVPC
+  RouteTableAssociation3: #logical ID for the third route table association
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref RouteTable3
+      SubnetId: !Ref PrivateSubnet3
+  InternetGateway: #logical ID for the internet gateway
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags: 
+      - Key: 'Name'
+        Value: 'InternetGatewaySG'
+  VPCGatewayAttachment: #logical ID for the VPC gateway attachment
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref InternetGateway
+      VpcId: !Ref CustomVPC
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref CustomVPC
+      Tags:
+        - Key: 'Name'
+          Value: 'PublicRouteTable'
+  PublicRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: '0.0.0.0/0'
+      GatewayId: !Ref InternetGateway
+      RouteTableId: !Ref PublicRouteTable
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: 'ap-southeast-1a'
+      CidrBlock: '172.31.1.0/24'
+      MapPublicIpOnLaunch: true
+      VpcId: !Ref CustomVPC
+      Tags:
+        - Key: Name
+          Value: PublicSubnet1
+  PublicSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      SubnetId: !Ref PublicSubnet1
+  
+      
+
+  
+
+
+
+
+
