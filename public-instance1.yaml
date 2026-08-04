@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PublicInstance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: 't2.micro'
+      AvailabilityZone: 'ap-southeast-1a'
+      ImageId: 'ami-03acbba64aef9bf5c'
+      KeyName: 'thuzar-aws-master-account'
+
+
+

@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS Clouldformation template for PublicInstance3 with Security Group.
+Resources:
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH and HTTP access
+      VpcId: vpc-064f536de9612a5d8
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          Fromport: 22
+          ToPort: 22
+          CidrIP: 0.0.0.0.0/0
+        - IpProtocol: tcp
+          Fromport: 80
+          ToPort: 80
+          CidrIP: 0.0.0.0.0/0
+    PublicInstance3:
+      Type: AWS::EC2::Instance
+      Properties:
+        InstanceType: t2.micro
+        AvailabilityZone: us-east-1c
+        ImageId: ami-03acbba64aef9bf5c
+        KeyName: thuzar-aws-master-account
+        SecurityGroups:
+          - !Ref InstanceSecurityGroup
+
+Outputs:
+  InstanceId:
+    Description: InstanceId of PublicInstance3
+    Value: !Ref PublicInstance3
+
+  PublicIP:
+    Description: Public IP address
+    Value: !GetAtt PublicInstance3.PublicIP
+
+  
+
+      
+
