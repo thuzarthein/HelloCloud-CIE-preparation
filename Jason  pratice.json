@@ -1,0 +1,37 @@
+{
+    "Version": "2012-10-17",
+    "Statement" :[
+        {
+            "Effect":"Allow",
+            "Action":[
+                "autoscaling:Describe*",
+                "cloudinwatch:Describe*",
+                "cloudwatch:Get*",
+                "cloudwatch:List*",
+                "logs:Get",
+                "logs:List",
+                "logs:Startquery",
+                "logs:Stopquery",
+                "logs:Describe",
+                "logs:TestMetricFilter",
+                "logs:FilterLogevents",
+                "logs:StartliveTail",
+                "oam:ListSinks",
+                "sns:Get",
+                "sns:List"
+            ],
+            "Resource":"*"
+        },
+        {
+
+            "Effect":"Allow",
+            "Action":[
+                "oam:ListAttachedLinks"
+            ],
+            "Resource":"arn:aws:oam:*:*:sinl/*"
+
+        }
+
+            ]
+
+    }

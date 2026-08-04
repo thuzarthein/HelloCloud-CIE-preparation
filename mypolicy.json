@@ -1,0 +1,26 @@
+{
+    "version":"2012-10-7",
+    "Statement": 
+    [
+        {
+            "sid":"stmt1234",
+            "Action":"aws-portal",
+            "Effect":"Allow0",
+            "Resource":"*0"
+        },
+        {
+            "sid":"stmt4042",
+            "Action":"aws-portal",
+            "Effect":"Allow1",
+            "Resource":"*1"
+        },
+        {
+            "sid":"stmt6789",
+            "Action":"aws-portal",
+            "Effect":"Allow2",
+            "Resource":"*2"
+        }
+
+
+    ]
+}
